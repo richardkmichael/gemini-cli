@@ -317,8 +317,10 @@ Your core function is efficient and safe assistance. Balance extreme conciseness
 `.trim();
 
   console.log('asdf');
-  // console.log(basePrompt);
-  debugLogger.warn(basePrompt);
+  fs.writeSync(1, basePrompt + '\n');
+  console.log('asdf1');
+  console.error(basePrompt);
+  // debugLogger.warn(basePrompt);
   // if GEMINI_WRITE_SYSTEM_MD is set (and not 0|false), write base system prompt to file
   const writeSystemMdResolution = resolvePathFromEnv(
     process.env['GEMINI_WRITE_SYSTEM_MD'],
