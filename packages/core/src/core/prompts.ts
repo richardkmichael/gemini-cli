@@ -114,7 +114,7 @@ export function getCoreSystemPrompt(
     const ambiguityInstruction = interactiveMode
       ? ` without confirming with the user. If asked *how* to do something, explain first, don't just do it.`
       : '';
-    const workCompletionInstruction = interactiveMode
+    const workCompletionInstruction = !interactiveMode
       ? `- **Continue the work** You are not to interact with the user. Do your best to complete the task at hand, using your best judgement and avoid asking user for any additional information.`
       : '';
     return `
