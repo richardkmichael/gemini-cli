@@ -318,7 +318,7 @@ Your core function is efficient and safe assistance. Balance extreme conciseness
 
   console.log('asdf');
   // console.log(basePrompt);
-  process.stdout.write(basePrompt + '\n');
+  debugLogger.warn(basePrompt);
   // if GEMINI_WRITE_SYSTEM_MD is set (and not 0|false), write base system prompt to file
   const writeSystemMdResolution = resolvePathFromEnv(
     process.env['GEMINI_WRITE_SYSTEM_MD'],
